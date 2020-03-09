@@ -28,6 +28,7 @@ jobs:
       with:
         artifacts: "target/*.jar"
         name: AntiRain $VERSION 
+        tag: $VERSION
         token: ${{ secrets.GITHUB_TOKEN }}
     
     
