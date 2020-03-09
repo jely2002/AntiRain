@@ -8,7 +8,6 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
@@ -25,7 +24,6 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         artifacts: "target/*.jar"
+        body: 'The changelog can be found at: https://www.spigotmc.org/resources/antirain.27224'
         name: AntiRain ${{ env.VERSION }} 
         token: ${{ secrets.GITHUB_TOKEN }}
-    
-    
