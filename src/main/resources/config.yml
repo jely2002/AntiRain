@@ -1,0 +1,5 @@
+#Add world names below to add them to the black-list (List of worlds where the plugin is disabled). Dont touch the config version.
+disabled-worlds: []
+disable-weather-commands: false
+disable-weather-message: '&4 This server has disabled the weather command'
+config-version: 1

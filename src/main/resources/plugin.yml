@@ -1,0 +1,20 @@
+name: AntiRain
+main: com.jelleglebbeek.antirain.Main
+description: Disables rain on your server
+author: jely2002
+website: jelleglebbeek.com
+version: '1.2'
+api-version: '1.15'
+commands:
+  antirain:
+    aliases: ar
+    description: AntiRain main command
+    usage: /ar [reload|version]
+    permission: ar.admin
+permissions:
+  ar.override:
+    description: Override the disabled weather commands
+    default: false
+  ar.admin:
+    description: Allows you to use the reload and version command.
+    default: false
