@@ -1,14 +1,12 @@
 name: Release build to GitHub
 
-on:
+on: 
   push:
-    branches: [ release ]
-  pull_request:
-    branches: [ release ]
+    tags:
+    - '*'
 
 jobs:
-  build:
-
+  release:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,8 +25,7 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         artifacts: "target/*.jar"
-        name: AntiRain $VERSION 
-        tag: $VERSION
+        name: AntiRain ${{ env.VERSION }} 
         token: ${{ secrets.GITHUB_TOKEN }}
     
     
