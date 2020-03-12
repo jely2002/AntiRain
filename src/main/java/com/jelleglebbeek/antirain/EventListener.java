@@ -19,11 +19,8 @@ public class EventListener implements Listener {
     @EventHandler
     public void onRain(WeatherChangeEvent e) {
         if(e.toWeatherState()) {
-            if(main.getConfig().getStringList("disabled-worlds").contains(e.getWorld().getName().toLowerCase()) || main.getConfig().getStringList("disabled-worlds").contains(e.getWorld().getName())) {
-                return;
-            } else {
-                e.setCancelled(true);
-            }
+            if(main.getConfig().getStringList("disabled-worlds").contains(e.getWorld().getName().toLowerCase()) || main.getConfig().getStringList("disabled-worlds").contains(e.getWorld().getName())) return;
+            e.setCancelled(true);
         }
     }
 
