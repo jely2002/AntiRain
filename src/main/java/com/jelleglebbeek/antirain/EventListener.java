@@ -30,6 +30,8 @@ public class EventListener implements Listener {
     @EventHandler
     public void command(PlayerCommandPreprocessEvent e) {
         if(e.getMessage().startsWith("/weather")) {
+            if(!main.getConfig().getBoolean("disable-weather-commands")) return;
+            if(main.getConfig().getStringList("disabled-worlds").contains(e.getPlayer().getWorld().getName().toLowerCase()) || main.getConfig().getStringList("disabled-worlds").contains(e.getPlayer().getWorld().getName())) return;
             if(e.getPlayer().hasPermission("ar.override")) return;
             e.setCancelled(true);
             e.getPlayer().sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(main.getConfig().getString("disable-weather-message"))));
