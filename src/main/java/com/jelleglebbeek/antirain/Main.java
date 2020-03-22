@@ -29,15 +29,8 @@ public class Main extends JavaPlugin {
     }
 
     private void checkUpdate() {
-        SpigotUpdater updater = new SpigotUpdater(this, 27224);
-        try {
-            if (updater.checkForUpdates())
-                getLogger().log(Level.INFO, "An update for AntiRain was found!");
-                getLogger().log(Level.INFO, "Please update to the new version: " + updater.getLatestVersion() + " download: " + updater.getResourceURL());
-        } catch (Exception e) {
-            getLogger().log(Level.WARNING, "Could not check for updates! Report this to the author:");
-            e.printStackTrace();
-        }
+        SpigotUpdater updater = new SpigotUpdater(this);
+        updater.checkUpdate();
     }
 
     private void initiallyDisableRain() {
