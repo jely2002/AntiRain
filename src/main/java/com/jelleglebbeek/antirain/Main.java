@@ -17,6 +17,8 @@ public class Main extends JavaPlugin {
         Commands commands = new Commands(this);
         getCommand("antirain").setExecutor(commands);
         getCommand("ar").setExecutor(commands);
+        getCommand("ar").setTabCompleter(commands);
+        getCommand("antirain").setTabCompleter(commands);
         getServer().getPluginManager().registerEvents(listener, this);
         getLogger().log(Level.INFO, ChatColor.BLUE + "AntiRain by jely2002 has been initialized");
     }
