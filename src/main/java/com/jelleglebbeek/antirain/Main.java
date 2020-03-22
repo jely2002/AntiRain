@@ -10,12 +10,15 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getLogger().log(Level.INFO, ChatColor.BLUE + "AntiRain by jely2002 has been initialized");
         checkUpdate();
         checkConfig();
         initiallyDisableRain();
         EventListener listener = new EventListener(this);
+        Commands commands = new Commands(this);
+        getCommand("antirain").setExecutor(commands);
+        getCommand("ar").setExecutor(commands);
         getServer().getPluginManager().registerEvents(listener, this);
+        getLogger().log(Level.INFO, ChatColor.BLUE + "AntiRain by jely2002 has been initialized");
     }
 
     private void checkConfig() {
