@@ -3,7 +3,7 @@ main: com.jelleglebbeek.antirain.Main
 description: Disables rain on your server
 author: jely2002
 website: jelleglebbeek.com
-version: '2.3'
+version: '2.4'
 api-version: '1.16'
 commands:
   antirain:
