@@ -4,7 +4,7 @@ description: Disables rain on your server
 author: jely2002
 website: jelleglebbeek.com
 version: '2.3'
-api-version: '1.15'
+api-version: '1.16'
 commands:
   antirain:
     aliases: ar
