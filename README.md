@@ -1,6 +1,6 @@
 # AntiRain
 A spigot plugin to stop raining on your server. And also disable the weather command for players.
-This plugin is compatible with all versions up to **1.15.2**
+This plugin is compatible with all versions up to **1.16.2**
 
 [SpigotMC page](https://www.spigotmc.org/resources/antirain.27224/)
 
